@@ -1,0 +1,26 @@
+{
+  "name": "luiz-main-page",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint language.js project-gallery.js",
+    "format": "prettier --write index.html en/index.html styles.css language.js project-gallery.js eslint.config.js package.json",
+    "format:check": "prettier --check index.html en/index.html styles.css language.js project-gallery.js eslint.config.js package.json",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "./{language.js,project-gallery.js}": [
+      "eslint",
+      "prettier --check"
+    ],
+    "{index.html,en/index.html,styles.css,eslint.config.js,package.json}": "prettier --check"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.10.1"
+  }
+}

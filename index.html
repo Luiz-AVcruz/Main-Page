@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Portfólio de Luiz, desenvolvedor de software. Projetos próprios em Lua e C# e canais de contato."
+    />
+    <title>Luiz — Desenvolvedor de software</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="language.js"></script>
+    <script src="project-gallery.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <nav aria-label="Nesta página">
+          <a href="#sobre">Sobre mim</a>
+          <a href="#projeto">Projetos</a>
+          <a href="#contato">Contato</a>
+        </nav>
+        <nav aria-label="Idioma">
+          <span aria-current="true">Português</span>
+          <a href="en/" data-language="en" hreflang="en" lang="en">English</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="intro split" aria-labelledby="nome">
+          <div class="intro-identity">
+            <h1 id="nome">Luiz</h1>
+            <p class="intro-role">Desenvolvedor de software</p>
+          </div>
+          <div class="intro-summary">
+            <p>
+              Desenvolvo software e uso projetos próprios para transformar
+              necessidades do dia a dia em ferramentas.
+            </p>
+            <div class="intro-links">
+              <a class="intro-primary" href="#sobre"
+                >Sobre mim <span aria-hidden="true">↓</span></a
+              >
+              <a href="https://www.linkedin.com/in/luiz-augusto-vitorino-cruz/"
+                >LinkedIn</a
+              >
+            </div>
+          </div>
+        </section>
+
+        <section
+          class="section split about"
+          id="sobre"
+          aria-labelledby="sobre-title"
+        >
+          <h2 id="sobre-title">Sobre mim</h2>
+          <div>
+            <p>
+              Comecei a criar mods a partir do que sentia falta nas partidas com
+              amigos. Quando quis organizar melhor nossas sessões de Teardown,
+              fiz um painel para reunir os controles e delegar tarefas dentro do
+              jogo.
+            </p>
+            <p>
+              Trabalho na interface e nas regras por trás dela. Isso envolve
+              escolher quais ações cada pessoa pode executar, decidir o que
+              precisa continuar salvo e integrar a ferramenta ao que o jogo já
+              faz.
+            </p>
+          </div>
+        </section>
+
+        <section class="section" id="projeto" aria-labelledby="titulo-projeto">
+          <h2 id="titulo-projeto">Projetos</h2>
+          <div class="project-group">
+            <div class="project-group-heading">
+              <h3 id="mods-title">Mods para jogos</h3>
+              <div
+                class="project-controls"
+                role="group"
+                aria-label="Navegação entre mods"
+              >
+                <a href="#mod-osp" data-direction="-1"
+                  ><span aria-hidden="true">←</span> Anterior</a
+                >
+                <a href="#mod-control-repo" data-direction="1"
+                  >Próximo <span aria-hidden="true">→</span></a
+                >
+              </div>
+            </div>
+            <div
+              class="project-track"
+              id="mods-track"
+              role="region"
+              aria-labelledby="mods-title"
+              tabindex="0"
+            >
+              <article class="project-entry" id="mod-osp">
+                <div>
+                  <h4>Open Session Panel (OSP)</h4>
+                  <p class="project-tech">Lua · Teardown</p>
+                  <p>
+                    Painel para gerenciar sessões de Teardown. O anfitrião pode
+                    delegar ações por cargo e manter as atribuições entre
+                    missões.
+                  </p>
+                  <p class="project-credit">
+                    Conduzi e revisei o desenvolvimento, com assistência do
+                    Codex no código Lua e na documentação.
+                  </p>
+                  <a
+                    href="https://github.com/Luiz-AVcruz/Open-Session-Panel-OSP"
+                    aria-label="Ver código no GitHub — Open Session Panel"
+                    >Ver código no GitHub</a
+                  >
+                </div>
+                <figure class="project-visual">
+                  <img
+                    src="assets/osp-cover.png"
+                    width="512"
+                    height="292"
+                    alt="OSP — Host/Admin Panel"
+                  />
+                  <figcaption>Capa oficial do mod</figcaption>
+                </figure>
+              </article>
+
+              <article class="project-entry" id="mod-control-repo">
+                <div>
+                  <h4>Control R.E.P.O.</h4>
+                  <p class="project-tech">C# · R.E.P.O.</p>
+                  <p>
+                    Mod que permite ao anfitrião controlar um Upscream e
+                    alternar entre o controle manual e a IA do jogo.
+                  </p>
+                  <p class="project-credit">
+                    Os testes documentados de criação e controle do monstro
+                    foram realizados pelo anfitrião.
+                  </p>
+                  <a
+                    href="https://github.com/Luiz-AVcruz/Control-REPO"
+                    aria-label="Ver código no GitHub — Control R.E.P.O."
+                    >Ver código no GitHub</a
+                  >
+                </div>
+                <figure class="project-visual">
+                  <ol
+                    class="project-flow"
+                    role="list"
+                    aria-label="Sequência de controle"
+                  >
+                    <li>Modo espectro</li>
+                    <li>Controle manual</li>
+                    <li>IA do jogo</li>
+                  </ol>
+                  <figcaption>Diagrama da passagem de controle</figcaption>
+                </figure>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer
+        class="section split"
+        id="contato"
+        aria-labelledby="titulo-contato"
+      >
+        <div>
+          <h2 id="titulo-contato">Contato</h2>
+          <p>Se quiser conversar sobre uma vaga, pode me chamar.</p>
+        </div>
+        <ul class="contact-links" role="list">
+          <li>
+            <a href="mailto:contato@luiz-avcruz.com.br"
+              >contato@luiz-avcruz.com.br</a
+            >
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/luiz-augusto-vitorino-cruz/"
+              >LinkedIn</a
+            >
+          </li>
+          <li><a href="https://github.com/Luiz-AVcruz">GitHub</a></li>
+        </ul>
+      </footer>
+    </div>
+  </body>
+</html>
