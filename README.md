@@ -1,3 +1,3 @@
 # Portfolio
 
-My personal website for sharing projects, publishing posts, and collecting links I find worth sharing.
+My personal website, where I'll share my projects, my posts, and whatever else comes to mind.
