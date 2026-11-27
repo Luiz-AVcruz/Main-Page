@@ -8,6 +8,8 @@
       content="Portfólio de Luiz, desenvolvedor de software. Projetos próprios em Lua e C# e canais de contato."
     />
     <title>Luiz — Desenvolvedor de software</title>
+    <meta name="color-scheme" content="light dark" />
+    <script src="theme.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <script src="language.js"></script>
     <script src="project-gallery.js" defer></script>
@@ -20,10 +22,20 @@
           <a href="#projeto">Projetos</a>
           <a href="#contato">Contato</a>
         </nav>
-        <nav aria-label="Idioma">
-          <span aria-current="true">Português</span>
-          <a href="en/" data-language="en" hreflang="en" lang="en">English</a>
-        </nav>
+        <div class="header-preferences">
+          <nav aria-label="Idioma">
+            <span aria-current="true">Português</span>
+            <a href="en/" data-language="en" hreflang="en" lang="en">English</a>
+          </nav>
+          <label class="theme-picker" hidden>
+            Tema
+            <select data-theme-picker>
+              <option value="system">Sistema</option>
+              <option value="light">Claro</option>
+              <option value="dark">Escuro</option>
+            </select>
+          </label>
+        </div>
       </header>
 
       <main>

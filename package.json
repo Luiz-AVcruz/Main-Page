@@ -3,13 +3,13 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "lint": "eslint language.js project-gallery.js",
-    "format": "prettier --write index.html en/index.html styles.css language.js project-gallery.js eslint.config.js package.json",
-    "format:check": "prettier --check index.html en/index.html styles.css language.js project-gallery.js eslint.config.js package.json",
+    "lint": "eslint language.js project-gallery.js theme.js",
+    "format": "prettier --write index.html en/index.html styles.css language.js project-gallery.js theme.js eslint.config.js package.json",
+    "format:check": "prettier --check index.html en/index.html styles.css language.js project-gallery.js theme.js eslint.config.js package.json",
     "prepare": "husky"
   },
   "lint-staged": {
-    "./{language.js,project-gallery.js}": [
+    "./{language.js,project-gallery.js,theme.js}": [
       "eslint",
       "prettier --check"
     ],

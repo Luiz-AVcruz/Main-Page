@@ -4,7 +4,7 @@ import globals from "globals";
 export default [
   {
     ...js.configs.recommended,
-    files: ["language.js", "project-gallery.js"],
+    files: ["language.js", "project-gallery.js", "theme.js"],
     languageOptions: { globals: globals.browser },
   },
 ];

@@ -4,15 +4,44 @@
   --muted: #444c5a;
   --accent: #2343a1;
   --rule: #c8c4b9;
+  --panel: #fffcf3;
+  --diagram: #e8eddb;
+  --diagram-rule: #8d9fc5;
+  --on-accent: #fffcf3;
+  --deep-ink: #162743;
   --light: #fffcf3;
   --on-dark: #edf0ff;
   --highlight: #e4ef9c;
   --serif: Georgia, "Times New Roman", serif;
 
+  color-scheme: light;
   background: var(--paper);
   color: var(--ink);
   font-family: system-ui, sans-serif;
   line-height: 1.6;
+}
+
+@supports (color: light-dark(white, black)) {
+  :root {
+    color-scheme: light dark;
+    --paper: light-dark(#f6f2ea, #101725);
+    --ink: light-dark(#162743, #eef2fc);
+    --muted: light-dark(#444c5a, #b7c2d5);
+    --accent: light-dark(#2343a1, #a8b9ff);
+    --rule: light-dark(#c8c4b9, #4e5e79);
+    --panel: light-dark(#fffcf3, #182236);
+    --diagram: light-dark(#e8eddb, #28384a);
+    --diagram-rule: light-dark(#8d9fc5, #8195b0);
+    --on-accent: light-dark(#fffcf3, #162743);
+  }
+
+  :root[data-theme="light"] {
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+  }
 }
 
 body {
@@ -47,7 +76,7 @@ a:hover {
   text-decoration-thickness: 0.12em;
 }
 
-:is(a, .project-track):focus-visible {
+:is(a, select, .project-track):focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
 }
@@ -76,6 +105,24 @@ a:hover {
 
 .site-header [aria-current] {
   font-weight: 650;
+}
+
+.header-preferences,
+.theme-picker:not([hidden]) {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.625rem;
+}
+
+.theme-picker select {
+  min-block-size: 2rem;
+  padding-inline: 0.375rem;
+  border: 1px solid var(--muted);
+  border-radius: 0.25rem;
+  background: var(--panel);
+  color: var(--ink);
+  font: inherit;
 }
 
 .split {
@@ -166,7 +213,7 @@ a:hover {
   gap: 0.5em;
   padding-inline: 1.125rem;
   background: var(--highlight);
-  color: var(--ink);
+  color: var(--deep-ink);
   text-decoration: none;
   font-weight: 650;
 }
@@ -242,7 +289,7 @@ a:hover {
   padding-inline: 0.625rem;
   border: 1px solid var(--accent);
   background: var(--accent);
-  color: var(--light);
+  color: var(--on-accent);
   font: inherit;
   font-size: 0.875rem;
   text-decoration: none;
@@ -277,7 +324,7 @@ a:hover {
   gap: 1.125rem;
   padding: clamp(0.875rem, 2vw, 1.5rem);
   border: 1px solid var(--rule);
-  background: var(--light);
+  background: var(--panel);
   scroll-snap-align: start;
   scroll-margin-block-start: 1rem;
 }
@@ -341,7 +388,7 @@ a:hover {
   aspect-ratio: 512 / 292;
   margin: 0;
   padding: clamp(0.4rem, 1.5vw, 0.875rem);
-  background: #e8eddb;
+  background: var(--diagram);
   list-style: none;
 }
 
@@ -351,7 +398,7 @@ a:hover {
   place-content: center;
   min-block-size: 3.5rem;
   padding: 0.3rem;
-  border: 1px solid #8d9fc5;
+  border: 1px solid var(--diagram-rule);
   background: var(--paper);
   color: var(--ink);
   font-size: 0.8125rem;
@@ -396,7 +443,7 @@ a:hover {
   margin-block-end: clamp(1.25rem, 4vw, 3rem);
   padding-inline: clamp(1.5rem, 6vw, 5rem);
   border-block-start: 0;
-  background: var(--ink);
+  background: var(--deep-ink);
   color: var(--light);
 }
 
