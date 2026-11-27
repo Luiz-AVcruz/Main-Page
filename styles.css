@@ -333,19 +333,15 @@ a:hover {
   cursor: default;
 }
 
-.project-grid,
+.project-group + .project-group {
+  margin-block-start: clamp(2rem, 4vw, 3rem);
+}
+
 .project-track {
   display: grid;
-  gap: 0.875rem;
-}
-
-.project-grid {
-  margin-block-end: clamp(2rem, 4vw, 3rem);
-}
-
-.project-track {
   grid-auto-flow: column;
   grid-auto-columns: 92%;
+  gap: 0.875rem;
   padding: 0.375rem 0.375rem 0.75rem;
   overflow-x: auto;
   scrollbar-color: var(--accent) transparent;
@@ -416,6 +412,14 @@ a:hover {
   display: block;
   width: 100%;
   height: auto;
+}
+
+.project-visual .project-icon {
+  box-sizing: border-box;
+  aspect-ratio: 512 / 292;
+  padding: 1rem;
+  background: var(--diagram);
+  object-fit: scale-down;
 }
 
 .project-visual figcaption {
@@ -524,11 +528,7 @@ a:hover {
     grid-auto-columns: 84%;
   }
 
-  .project-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .project-track > .project-entry {
+  .project-entry {
     grid-template-columns: minmax(0, 11fr) minmax(0, 10fr);
     column-gap: clamp(1.5rem, 3vw, 2.75rem);
   }

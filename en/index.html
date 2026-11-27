@@ -89,12 +89,29 @@
 
         <section class="section" id="project" aria-labelledby="project-title">
           <h2 id="project-title">Projects</h2>
-          <section aria-labelledby="apps-title">
+          <div class="project-group">
             <div class="project-group-heading">
               <h3 id="apps-title">Applications</h3>
+              <div
+                class="project-controls"
+                role="group"
+                aria-label="Browse applications"
+              >
+                <a href="#app-financas" data-direction="-1"
+                  ><span aria-hidden="true">←</span> Previous</a
+                >
+                <a href="#app-horas" data-direction="1"
+                  >Next <span aria-hidden="true">→</span></a
+                >
+              </div>
             </div>
-            <div class="project-grid">
-              <article class="project-entry">
+            <div
+              class="project-track"
+              role="region"
+              aria-labelledby="apps-title"
+              tabindex="0"
+            >
+              <article class="project-entry" id="app-financas">
                 <div>
                   <h4 lang="pt-BR">Finanças</h4>
                   <p class="project-tech">Python · Tauri · SQLite</p>
@@ -108,8 +125,17 @@
                     >View source on GitHub</a
                   >
                 </div>
+                <figure class="project-visual">
+                  <img
+                    class="project-icon"
+                    src="../assets/financas-icon.png"
+                    width="128"
+                    height="128"
+                    alt=""
+                  />
+                </figure>
               </article>
-              <article class="project-entry">
+              <article class="project-entry" id="app-horas">
                 <div>
                   <h4 lang="pt-BR">Horas</h4>
                   <p class="project-tech">TypeScript · Tauri · SQLite</p>
@@ -123,9 +149,18 @@
                     >View source on GitHub</a
                   >
                 </div>
+                <figure class="project-visual">
+                  <img
+                    class="project-icon"
+                    src="../assets/horas-icon.png"
+                    width="128"
+                    height="128"
+                    alt=""
+                  />
+                </figure>
               </article>
             </div>
-          </section>
+          </div>
           <div class="project-group">
             <div class="project-group-heading">
               <h3 id="mods-title">Game mods</h3>
